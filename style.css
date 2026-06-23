@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 15px;
+    background-color: hwb(60 86% 4% / 0.993);
+    line-height: 1.5;
+
+}
+
+
+
+h1,
+h2,
+h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+
+}
+
+header {
+    background-color: black;
+    color: antiquewhite;
+    text-align: center;
+    padding: 15px;
+
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+
+}
+
+.img-potrait {
+    width: 350px;
+    height: 350px;
+    margin-left: 30px;
+    margin-bottom: 6px;
+    border-radius: 30px;
+
+}
+
+article {
+    background-color: #ffff00;
+    padding: 25px;
+    margin-bottom: 20px;
+
+}
+
+article h2 {
+    font-size: 2.2rem;
+
+}
+
+article p {
+    font-size: 1.2rem;
+
+}
+
+aside {
+    background-color: #b0b0b0;
+    padding: 25px;
+    margin-bottom: 20px;
+
+}
+
+aside h3 {
+    font-size: 2rem;
+
+}
+
+aside ul {
+    padding-left: 20px;
+    font-size: 1.2rem;
+
+}
+
+figure {
+    background-color: #14b8a6;
+    padding: 25px;
+    margin: 0;
+    margin-bottom: 20px;
+
+}
+
+figure h3 {
+    font-size: 2rem;
+
+}
+
+blockquote {
+    font-style: italic;
+    margin: 0;
+    font-size: 1.2rem;
+
+}
+
+figcaption {
+    margin-top: 10px;
+    font-weight: bold;
+
+}
+
+.main-content-box {
+    background-color: #ffffff3b;
+    padding: 10px;
+
+}
+
+.goals-box {
+    background-color: #1f4b21;
+
+}
+
+figure {
+    background-color: #4aeb0a;
+    padding: 20px;
+
+}
+
+.contact-section {
+    background-color: #43aa9e;
+    padding: 25px;
+    margin-bottom: 20px;
+
+}
+
+.contact-section a {
+    color: #0000ee;
+    text-decoration: underline;
+
+}
+footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    border-top: 1px solid #e0e0e0;
+    color: #666666;
+    width: 100%;
+
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-top: 35px;
+    margin-bottom: 15px;
+
+}
+
+.spaced-link {
+    margin-top: 25px;
+    display: block;
+    
+}
