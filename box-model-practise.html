@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model Mastery</title>
+    <style>
+        /* Global Reset & Base Styling */
+        * {
+            box-sizing: border-box; /* The universal fix for Exercise 2! */
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            background-color: #f5f5f5;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+
+        h2 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        p.explanation {
+            background-color: #eec;
+            padding: 15px;
+            border-left: 5px solid #f1c40f;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        /* ==========================================================================
+           Exercise 1: Box Model Visualization
+           ========================================================================== */
+        .visualization-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            text-align: center;
+            color: white;
+        }
+
+        /* Content only gets background color */
+        .content-box {
+            background-color: #3498db;
+        }
+
+        /* Padding increases the internal clickable/content zone area */
+        .padding-box {
+            background-color: #2ecc71;
+            padding: 30px; 
+        }
+
+        /* Border adds a visible frame around the element */
+        .border-box {
+            background-color: #e74c3c;
+            border: 10px solid #c0392b;
+        }
+
+        /* Margin creates space outside, pushing other elements away */
+        .margin-box {
+            background-color: #9b59b6;
+            margin-right: 50px; /* Generates physical separation on the right */
+        }
+
+        /* ==========================================================================
+           Exercise 2: Debugged Box Layout
+           ========================================================================== */
+        .broken-box {
+            /* WHY IT WAS 340px WIDE: By default, browsers use 'content-box', which adds 
+               padding/borders on TOP of your width (300px width + 20px left padding + 20px right padding).
+               FIX: 'box-sizing: border-box' forces padding into the 300px container width. */
+            box-sizing: border-box; 
+            width: 300px;
+            padding: 20px;
+            background-color: #e67e22;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            border: none;
+        }
+
+        /* ==========================================================================
+           Exercise 3: Card Component
+           ========================================================================== */
+        .card {
+            width: 300px;           /* Exact total width required */
+            border: 1px solid gray; /* Required border */
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;       /* Keeps image clipped nicely to border corners */
+        }
+
+        .card-image {
+            width: 100%;           /* Spans full width of the card */
+            display: block;        /* Removes default inline baseline gap below images */
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;         /* Exact internal spacing */
+        }
+
+        .card-title {
+            margin-bottom: 15px;   /* Exact spacing rule below the title */
+            font-size: 1.25rem;
+            color: #2c3e50;
+        }
+
+        .card-description {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .card-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .card-button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Task 3.2: Box Model Mastery</h1>
+
+    <!-- Exercise 1 -->
+    <h2>Exercise 1: Box Model Visualization</h2>
+    <div class="visualization-container">
+        <div class="box content-box">Content Area</div>
+        <div class="box padding-box">Padding Area</div>
+        <div class="box border-box">Border Area</div>
+        <div class="box margin-box">Margin Space</div>
+    </div>
+
+    <!-- Exercise 2 -->
+    <h2>Exercise 2: Debug the Layout</h2>
+    <p class="explanation">
+        <strong>Debug Notes:</strong> The original box expanded to 340px because default CSS treats <code>width</code> as content-only. Adding 20px left padding and 20px right padding pushed it out. Adding <code>box-sizing: border-box</code> solves this perfectly, making the total footprint exactly 300px wide.
+    </p>
+    <div class="broken-box">Fixed! Exact 300px Wide</div>
+
+    <!-- Exercise 3 -->
+    <h2>Exercise 3: Card Component</h2>
+    <article class="card">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=300&q=80" alt="Scenic beach" class="card-image">
+        <div class="card-content">
+            <h3 class="card-title">Card Title</h3>
+            <p class="card-description">This card strictly follows precision specifications. It scales beautifully within an exact 300px total outer layout grid framework.</p>
+            <button class="card-button">Action Button</button>
+        </div>
+    </article>
+
+</body>
+</html>
